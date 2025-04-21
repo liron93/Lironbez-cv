@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,25 +54,46 @@
       margin-top: 20px;
       justify-content: space-between;
     }
-   .project-card {
-  background-color: #161b22;
-  border: 1px solid #30363d;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-  max-width: 280px;
-  text-align: center;
-  position: relative;
-  transition: transform 0.3s;
-  padding-bottom: 80px; /* מוסיף מקום לכפתור ולתיאור */
+    .project-card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s;
+      padding-bottom: 80px;
     }
     .project-card:hover {
       transform: scale(1.03);
     }
-    .project-card img {
+    .image-wrapper {
+      position: relative;
       width: 100%;
       height: 160px;
+      overflow: hidden;
+    }
+    .image-wrapper img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+    }
+    .project-description {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-size: 0.9em;
+      padding: 8px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .image-wrapper:hover .project-description {
+      opacity: 1;
     }
     .project-card a {
       display: block;
@@ -81,26 +101,11 @@
       font-weight: bold;
       color: #58a6ff;
       text-decoration: none;
-      margin-bottom: 40px;
-    }
-    .project-description {
-      position: absolute;
-      bottom: 50px;
-      left: 0;
-      right: 0;
-      background-color: rgba(13, 17, 23, 0.9);
-      color: #c9d1d9;
-      font-size: 0.9em;
-      padding: 10px;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .project-card:hover .project-description {
-      opacity: 1;
+      margin-bottom: 10px;
     }
     .learn-more-btn {
       position: absolute;
-      bottom: 5px;
+      bottom: 10px;
       left: 50%;
       transform: translateX(-50%);
       background-color: #238636;
@@ -144,22 +149,28 @@
     <h2>🧪 Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <img src="https://via.placeholder.com/300x160" alt="Project 1">
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x160" alt="Project 1">
+          <div class="project-description">A gamified habit tracker that rewards daily progress and consistency.</div>
+        </div>
         <a href="#">HabitHero</a>
-        <div class="project-description">A gamified habit tracker that rewards daily progress and consistency.</div>
-        <a href="project1.html" target="_blank" class="learn-more-btn">Learn More</a>
+        <button class="learn-more-btn" onclick="location.href='#'">Learn More</button>
       </div>
       <div class="project-card">
-        <img src="https://via.placeholder.com/300x160" alt="Project 2">
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x160" alt="Project 2">
+          <div class="project-description">An interactive dashboard for tracking user behavior and engagement insights.</div>
+        </div>
         <a href="#">UX Dashboard Concept</a>
-        <div class="project-description">An interactive dashboard for tracking user behavior and engagement insights.</div>
-        <a href="project1.html" target="_blank" class="learn-more-btn">Learn More</a>
+        <button class="learn-more-btn" onclick="location.href='#'">Learn More</button>
       </div>
       <div class="project-card">
-        <img src="https://via.placeholder.com/300x160" alt="Project 3">
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x160" alt="Project 3">
+          <div class="project-description">A task manager that motivates users with points, levels, and streak goals.</div>
+        </div>
         <a href="#">Gamified Task Manager</a>
-        <div class="project-description">A task manager that motivates users with points, levels, and streak goals.</div>
-        <a href="project1.html" target="_blank" class="learn-more-btn">Learn More</a>
+        <button class="learn-more-btn" onclick="location.href='#'">Learn More</button>
       </div>
     </div>
   </div>
