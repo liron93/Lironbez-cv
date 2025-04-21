@@ -11,31 +11,37 @@
       background-color: #0d1117;
       color: #c9d1d9;
     }
-    header {
-      background-color: #161b22;
-      padding: 60px 20px 40px 20px;
-      position: relative;
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-    }
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #58a6ff;
-      position: absolute;
-      left: 40px;
-      bottom: -75px;
+      padding: 80px 20px 60px;
       background-color: #0d1117;
     }
-    .header-text h1 {
-      margin: 0;
-      font-size: 2.8em;
+    .hero-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 30px;
+      border: 3px solid #58a6ff;
+      background-color: #1c1f26;
     }
-    .header-text p {
-      margin-top: 10px;
-      font-size: 1.2em;
+    .hero h1 {
+      font-size: 2.6em;
+      font-weight: bold;
+      margin: 0 0 15px;
+      color: #ffffff;
+    }
+    .hero h1 .highlight {
+      color: #58a6ff;
+    }
+    .hero p {
+      font-size: 1.1em;
       color: #8b949e;
+      max-width: 600px;
     }
     .section {
       padding: 60px 20px;
@@ -47,145 +53,21 @@
       border-bottom: 1px solid #30363d;
       padding-bottom: 10px;
     }
-    .projects-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 20px;
-      justify-content: space-between;
-    }
-    .project-card {
-      background-color: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 10px;
-      overflow: hidden;
-      width: 100%;
-      max-width: 200px;
-      text-align: center;
-      position: relative;
-      transition: transform 0.3s;
-      padding-bottom: 10px;
-    }
-    .project-card:hover {
-      transform: scale(1.03);
-    }
-    .image-wrapper {
-      position: relative;
-      width: 100%;
-      height: 140px;
-      overflow: hidden;
-    }
-    .image-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .project-description {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: #0d1117;
-      color: #c9d1d9;
-      font-size: 0.8em;
-      padding: 8px;
-      opacity: 0;
-      transition: opacity 0.3s;
-      z-index: 2;
-    }
-    .image-wrapper:hover .project-description {
-      opacity: 1;
-    }
-    .project-card a {
-      display: block;
-      padding: 8px 10px 0;
-      font-weight: bold;
-      color: #58a6ff;
-      text-decoration: none;
-      margin-bottom: 8px;
-    }
-    .learn-more-btn {
-      background-color: #238636;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      padding: 6px 14px;
-      font-size: 0.85em;
-      cursor: pointer;
-      z-index: 3;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #8b949e;
-    }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://i.imgur.com/7lGQP7C.png" alt="Liron Bezalel" class="profile-img">
-    <div class="header-text">
-      <h1>Liron Bezalel</h1>
-      <p>Product Manager | Building intuitive digital products</p>
-    </div>
-  </header>
+  <!-- Hero section -->
+  <section class="hero">
+    <img src="your-image.jpg" alt="Liron Bezalel" class="hero-img">
+    <h1>I build <span class="highlight">products</span> that make a difference</h1>
+    <p>Transforming ideas into impactful user experiences – with strategy, empathy, and results.</p>
+  </section>
 
+  <!-- About section -->
   <div class="section">
     <h2>About Me</h2>
     <p>I’m a product manager who thrives on turning complex challenges into simple, engaging experiences.<br>
     I work at the intersection of user needs, business goals, and creative problem-solving to build products that deliver real value.</p>
   </div>
-
-  <div class="section">
-    <h2>🧪 Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="image-wrapper">
-          <img src="https://via.placeholder.com/300x160" alt="Project 1">
-          <div class="project-description">A gamified habit tracker that rewards daily progress and consistency.</div>
-        </div>
-        <a href="#">HabitHero</a>
-        <button class="learn-more-btn" onclick="location.href='#'">Learn More</button>
-      </div>
-      <div class="project-card">
-        <div class="image-wrapper">
-          <img src="https://via.placeholder.com/300x160" alt="Project 2">
-          <div class="project-description">An interactive dashboard for tracking user behavior and engagement insights.</div>
-        </div>
-        <a href="#">UX Dashboard Concept</a>
-        <button class="learn-more-btn" onclick="location.href='#'">Learn More</button>
-      </div>
-      <div class="project-card">
-        <div class="image-wrapper">
-          <img src="https://via.placeholder.com/300x160" alt="Project 3">
-          <div class="project-description">A task manager that motivates users with points, levels, and streak goals.</div>
-        </div>
-        <a href="#">Gamified Task Manager</a>
-        <button class="learn-more-btn" onclick="location.href='#'">Learn More</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>📄 Resume</h2>
-    <p><a href="#">Download My Resume (PDF)</a></p>
-  </div>
-
-  <div class="section">
-    <h2>🧠 Skills & Tools</h2>
-    <p>Product Thinking | User Research | MVP Scoping | A/B Testing</p>
-    <p>Figma | Notion | Trello | Jira | Google Analytics | Git (basic)</p>
-  </div>
-
-  <div class="section">
-    <h2>📬 Contact</h2>
-    <p>Email: liron@email.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/lironbezalel" target="_blank">linkedin.com/in/lironbezalel</a></p>
-  </div>
-
-  <footer>
-    &copy; 2025 Liron Bezalel. All rights reserved.
-  </footer>
 </body>
 </html>
