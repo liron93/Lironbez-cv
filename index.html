@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,10 +80,11 @@
       font-weight: bold;
       color: #58a6ff;
       text-decoration: none;
+      margin-bottom: 40px;
     }
     .project-description {
       position: absolute;
-      bottom: 40px; /* שינינו מ-0 כדי לפנות מקום לכפתור */
+      bottom: 50px;
       left: 0;
       right: 0;
       background-color: rgba(13, 17, 23, 0.9);
@@ -95,7 +97,6 @@
     .project-card:hover .project-description {
       opacity: 1;
     }
-    /* כפתור "Learn More" */
     .learn-more-btn {
       position: absolute;
       bottom: 5px;
@@ -110,6 +111,7 @@
       cursor: pointer;
       opacity: 0;
       transition: opacity 0.3s;
+      z-index: 2;
     }
     .project-card:hover .learn-more-btn {
       opacity: 1;
@@ -124,7 +126,6 @@
 </head>
 <body>
   <header>
-    <!-- תמונה מעוגלת בצד שמאל של הבאנר -->
     <img src="https://i.imgur.com/7lGQP7C.png" alt="Liron Bezalel" class="profile-img">
     <div class="header-text">
       <h1>Liron Bezalel</h1>
@@ -141,21 +142,18 @@
   <div class="section">
     <h2>🧪 Projects</h2>
     <div class="projects-grid">
-      <!-- כרטיס פרויקט 1 -->
       <div class="project-card">
         <img src="https://via.placeholder.com/300x160" alt="Project 1">
         <a href="#">HabitHero</a>
         <div class="project-description">A gamified habit tracker that rewards daily progress and consistency.</div>
         <button class="learn-more-btn" onclick="location.href='#'">Learn More</button>
       </div>
-      <!-- כרטיס פרויקט 2 -->
       <div class="project-card">
         <img src="https://via.placeholder.com/300x160" alt="Project 2">
         <a href="#">UX Dashboard Concept</a>
         <div class="project-description">An interactive dashboard for tracking user behavior and engagement insights.</div>
         <button class="learn-more-btn" onclick="location.href='#'">Learn More</button>
       </div>
-      <!-- כרטיס פרויקט 3 -->
       <div class="project-card">
         <img src="https://via.placeholder.com/300x160" alt="Project 3">
         <a href="#">Gamified Task Manager</a>
