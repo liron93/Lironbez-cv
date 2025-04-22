@@ -11,6 +11,15 @@
       background-color: #0d1117;
       color: #c9d1d9;
     }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
     .hero {
       display: flex;
       flex-direction: column;
@@ -91,6 +100,20 @@
       padding: 20px 25px;
       margin-bottom: 20px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .experience-box img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #58a6ff;
+      background-color: #0d1117;
+    }
+    .experience-content {
+      flex: 1;
     }
     .experience-box h3 {
       margin: 0;
@@ -110,10 +133,25 @@
       margin-bottom: 10px;
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faders = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      faders.forEach(el => observer.observe(el));
+    });
+  </script>
 </head>
 <body>
   <!-- Hero section -->
-  <section class="hero">
+  <section class="hero fade-in">
     <img src="your-image.jpg" alt="Liron Bezalel" class="hero-img">
     <h1>I build <span class="highlight">products</span> that make a difference</h1>
     <p>Transforming ideas into impactful user experiences – with strategy, empathy, and results.</p>
@@ -121,7 +159,7 @@
   </section>
 
   <!-- About section -->
-  <div class="section">
+  <div class="section fade-in">
     <h2>About Me</h2>
     <div class="about-box">
       <p>I’m a product manager who thrives on turning complex challenges into simple, engaging experiences.<br>
@@ -130,27 +168,33 @@
   </div>
 
   <!-- Work Experience section -->
-  <div class="section">
+  <div class="section fade-in">
     <h2>Work Experience</h2>
 
     <div class="experience-box">
-      <h3>Product Manager – Web Development Agency</h3>
-      <div class="meta">2023 – Present</div>
-      <ul>
-        <li>Led the end-to-end development of custom eCommerce platforms for multiple clients.</li>
-        <li>Collaborated with designers and developers to improve product usability and conversion rates.</li>
-        <li>Managed roadmap and backlog across multiple agile teams.</li>
-      </ul>
+      <img src="pm-image.jpg" alt="Product Manager">
+      <div class="experience-content">
+        <h3>Product Manager – Web Development Agency</h3>
+        <div class="meta">2023 – Present</div>
+        <ul>
+          <li>Led the end-to-end development of custom eCommerce platforms for multiple clients.</li>
+          <li>Collaborated with designers and developers to improve product usability and conversion rates.</li>
+          <li>Managed roadmap and backlog across multiple agile teams.</li>
+        </ul>
+      </div>
     </div>
 
     <div class="experience-box">
-      <h3>Project Manager – Software House</h3>
-      <div class="meta">2021 – 2023</div>
-      <ul>
-        <li>Oversaw delivery of over 25 web and mobile projects on time and within scope.</li>
-        <li>Introduced agile processes and improved sprint planning and retrospectives.</li>
-        <li>Acted as bridge between clients, designers, and developers to align vision and execution.</li>
-      </ul>
+      <img src="pm2-image.jpg" alt="Project Manager">
+      <div class="experience-content">
+        <h3>Project Manager – Software House</h3>
+        <div class="meta">2021 – 2023</div>
+        <ul>
+          <li>Oversaw delivery of over 25 web and mobile projects on time and within scope.</li>
+          <li>Introduced agile processes and improved sprint planning and retrospectives.</li>
+          <li>Acted as bridge between clients, designers, and developers to align vision and execution.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
