@@ -4,150 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Liron Bezalel – Product Manager</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0d1117;
-      color: #c9d1d9;
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: none;
-    }
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 20px 60px;
-      background-color: #0d1117;
-    }
-    .hero-img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 30px;
-      border: 3px solid #58a6ff;
-      background-color: #1c1f26;
-    }
-    .hero h1 {
-      font-size: 2.6em;
-      font-weight: bold;
-      margin: 0 0 15px;
-      color: #ffffff;
-    }
-    .hero h1 .highlight {
-      color: #58a6ff;
-    }
-    .hero p {
-      font-size: 1.1em;
-      color: #8b949e;
-      max-width: 600px;
-    }
-    .resume-button {
-      margin-top: 30px;
-      padding: 10px 20px;
-      font-size: 1em;
-      background-color: #238636;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      text-decoration: none;
-    }
-    .resume-button:hover {
-      background-color: #2ea043;
-    }
-    .section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .section h2 {
-      color: #ffffff;
-      text-align: center;
-      font-size: 2em;
-      margin-bottom: 30px;
-    }
-    .about-box {
-      background-color: #265f85;
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.1em;
-      line-height: 1.6em;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .about-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
-    }
-    .experience-box {
-      background-color: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 16px;
-      padding: 20px 25px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
-    .experience-box img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #58a6ff;
-      background-color: #0d1117;
-    }
-    .experience-content {
-      flex: 1;
-    }
-    .experience-box h3 {
-      margin: 0;
-      font-size: 1.3em;
-      color: #ffffff;
-    }
-    .experience-box .meta {
-      font-size: 0.95em;
-      color: #8b949e;
-      margin-bottom: 10px;
-    }
-    .experience-box ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-    .experience-box ul li {
-      margin-bottom: 10px;
-    }
-  </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const faders = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      faders.forEach(el => observer.observe(el));
-    });
-  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Hero section -->
@@ -194,6 +51,31 @@
           <li>Introduced agile processes and improved sprint planning and retrospectives.</li>
           <li>Acted as bridge between clients, designers, and developers to align vision and execution.</li>
         </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Side Projects section -->
+  <div class="section fade-in">
+    <h2>Side Projects</h2>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+      <div style="flex: 1 1 250px; max-width: 280px; background-color: #161b22; border-radius: 16px; padding: 20px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease;">
+        <img src="project1.jpg" alt="HabitHero" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+        <h3 style="color: #ffffff; margin: 0 0 10px;">HabitHero</h3>
+        <p style="color: #8b949e; font-size: 0.95em;">A gamified habit tracker that rewards consistency and progress.</p>
+        <a href="#" style="display: inline-block; margin-top: 10px; padding: 6px 12px; background-color: #238636; color: #fff; border-radius: 6px; text-decoration: none; font-size: 0.85em;">Learn More</a>
+      </div>
+      <div style="flex: 1 1 250px; max-width: 280px; background-color: #161b22; border-radius: 16px; padding: 20px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease;">
+        <img src="project2.jpg" alt="UX Dashboard" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+        <h3 style="color: #ffffff; margin: 0 0 10px;">UX Dashboard</h3>
+        <p style="color: #8b949e; font-size: 0.95em;">Interactive dashboard for tracking user behavior and insights.</p>
+        <a href="#" style="display: inline-block; margin-top: 10px; padding: 6px 12px; background-color: #238636; color: #fff; border-radius: 6px; text-decoration: none; font-size: 0.85em;">Learn More</a>
+      </div>
+      <div style="flex: 1 1 250px; max-width: 280px; background-color: #161b22; border-radius: 16px; padding: 20px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease;">
+        <img src="project3.jpg" alt="Gamified Task Manager" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+        <h3 style="color: #ffffff; margin: 0 0 10px;">TaskMaster</h3>
+        <p style="color: #8b949e; font-size: 0.95em;">A task manager that motivates users with levels, streaks and achievements.</p>
+        <a href="#" style="display: inline-block; margin-top: 10px; padding: 6px 12px; background-color: #238636; color: #fff; border-radius: 6px; text-decoration: none; font-size: 0.85em;">Learn More</a>
       </div>
     </div>
   </div>
